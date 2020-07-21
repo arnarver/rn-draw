@@ -55,7 +55,7 @@ export default class Whiteboard extends React.Component {
     
   }
 
-  componentWillReceiveProps(newProps) {
+  UNSAFE_componentWillReceiveProps(newProps) {
     if(this.props.strokes && newProps.strokes && JSON.stringify(this.props.strokes) !== JSON.stringify(newProps.strokes)){
       this.setState({
         previousStrokes: newProps.strokes,
